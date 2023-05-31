@@ -27,7 +27,7 @@ You can go to :
 
 ## About the Team
 
-- [@Yurii Skiter](https://github.com/yuragoit) Team Lead, DevOps, QA
+- [@Yurii Skiter](https://github.com/yuragoit) Team Lead, DevOps, MLOps QA
 - [@Dmytro Levoshko](https://github.com/DmytroLievoshko) Scrum Master, Dev, QA
 - [@Valerii Sydorenko](https://github.com/ErizoUA) Dev, QA
 - [@Serhii Korobchenko](https://github.com/serhii-korobchenko) Dev, QA
