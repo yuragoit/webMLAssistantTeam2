@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "webAssistantTeam4"
+version = "0.1.1"
+description = ""
+authors = ["TEAM 4"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.1.6"
+asgiref = "^3.6.0"
+autopep8 = "^2.0.1"
+dj-database-url = "^1.2.0"
+gunicorn = "^20.1.0"
+psycopg2-binary = "^2.9.5"
+pycodestyle = "^2.10.0"
+pytz = "^2022.7.1"
+sqlparse = "^0.4.3"
+toml = "^0.10.2"
+whitenoise = "^6.3.0"
+django-environ = "^0.9.0"
+django-allauth = "0.52.0"
+django-phonenumber-field = "^7.0.2"
+django-phonenumbers = "^1.0.1"
+django-sslserver = "^0.22"
+itemadapter = "^0.7.0"
+Scrapy = "^2.8.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.9.0"
+factory-boy = "^3.2.1"
+autopep8 = "^2.0.1"
+black = "^23.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

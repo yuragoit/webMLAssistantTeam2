@@ -1,0 +1,10 @@
+.btn {
+  background-color: rgb(0,0,0,0);
+  border: none;
+  float: right;
+  color: white;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}

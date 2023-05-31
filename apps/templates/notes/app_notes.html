@@ -1,0 +1,132 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<link href="{% static 'assets/css/notes.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Datatables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css">
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Notes Page</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="{% url 'notes:notes_list'%}">Notes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="row align-items-end">
+                                <div class="add-button">
+                                    <a href="{% url 'notes:note_create' %}" class="btn btn-primary"><i class="bx bx-plus me-1"></i> Add
+                                                New</a>
+                                </div>
+                            </div>
+                            <table class="table project-list-table table-nowrap align-middle table-borderless" id="example">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Created</th>
+                                        <th scope="col">Short description</th>
+                                        <th scope="col">Tags</th>
+                                        <th scope="col">Done</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for note in object_list %}
+                                    <tr>
+                                        <td>{{note.created}}</td>
+                                        {% if note.done %}
+                                        <td><a href="{% url 'notes:note_detail' note.id %}" role="button" class="text-through">{{note.name}}</a>
+                                        </td>
+                                        <td>{{note.teg_list}}</td>
+                                        <td>{{note.done}}</td>
+                                        {% else %}
+                                        <td><a href="{% url 'notes:note_detail' note.id %}" role="button">{{note.name}}</a>
+                                        </td>
+                                        <td>{{note.teg_list}}</td>
+                                        <td><a href="{% url 'notes:notes_set_done' note.id %}" role="button">{{note.done}}</a></td>
+                                        {% endif %}
+                                        <td>
+                                            <ul class="list-inline mb-0">
+                                                <li class="list-inline-item">
+                                                    <a href="{% url 'notes:note_update' note.id %}" data-bs-toggle="tooltip"
+                                                        data-bs-placement="top" title="Edit" class="px-2 text-primary"><i
+                                                            class="bx bx-pencil"></i></a>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <form action="{% url 'notes:note_delete' note.id %}" method="post">
+                                                        {% csrf_token %}
+                                                        <button type="submit" title="Delete"
+                                                            style="border:none; background-color: transparent;"
+                                                            class="text-danger">
+                                                            <i class="bx bx-trash-alt"></i>
+                                                        </button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </td>                                        
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<!-- Datatables JS -->
+<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Datatables script -->
+<script>
+    $('#example').DataTable({
+        dom: 'rtip',
+        paging: true,
+        pageLength: 10,
+        autoWidth: true,
+        searching: true,
+        bInfo: true,
+        bSort: true,
+        order: [[ 0, "desc" ]],
+        columnDefs: [{
+            targets: [4],
+            orderable: false,
+        }]
+    });
+    var newSearch = $('#example').DataTable();
+    $('#m-search2').keyup(function() {
+        newSearch.search($(this).val()).draw();
+    })
+</script>
+
+{% endblock javascripts %}

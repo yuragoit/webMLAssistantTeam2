@@ -1,0 +1,119 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Profile {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Edit Info</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Email address</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="fn">First Name</label>
+                                                        <input type="email" class="form-control" id="fn" aria-describedby="emailHelp" placeholder="Enter email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="ln">Last Name</label>
+                                                        <input type="email" class="form-control" id="ln" aria-describedby="emailHelp" placeholder="Enter email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="add">Address</label>
+                                                        <input type="email" class="form-control" id="add" aria-describedby="emailHelp" placeholder="Enter email">
+                                                        <small id="addd" class="form-text text-muted">This is your shipments address</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="abt">About Info</label>
+                                                        <textarea type="email" class="form-control" id="abt" aria-describedby="emailHelp" placeholder="Bio"></textarea>
+                                                        <small id="abf" class="form-text text-muted">We'll show this on your profile.</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <div class="d-flex align-items-center justify-content-center flex-column">
+                                                <div class="w-50 p-3">
+                                                    <img src="https://via.placeholder.com/500" alt="profile image"
+                                                        class="img-fluid rounded-circle">
+                                                </div>
+                                                <div class="text-center">
+                                                    <h4 class="font-weight-bold h6">Author Alias</h4>
+                                                    <p class="font-italic text-muted">TEAM4 GoIT Lab</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="small font-weight-light mt-4 text-center text-muted">
+                                                <p>
+                                                    <b>Main features:</b>
+                                                    <li align="left">save contacts with names, addresses, phone numbers, emails and birthdays to the contact book</li>
+                                                    <li align="left">checking the correctness of the entered phone number and email when creating or editing a record</li>
+                                                    <li align="left">search for contacts from the contact book, view all contacts, find contacts by any field</li>
+                                                    <li align="left">edit and delete entries from the contact book, reset all contacts</li>
+                                                    <li align="left">display a list of contacts who have a birthday in a specified number of days from the current date</li>
+                                                    <li align="left">save notes with text information</li>
+                                                    <li align="left">searching by notes</li>
+                                                    <li align="left">edit and delete notes</li>
+                                                    <li align="left">add "tags" to the notes, keywords that describe the topic and subject of the record</li>
+                                                    <li align="left">search and sort notes by keywords (tags)</li>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <a href="#" class="h6 text-muted d-block m-1"><i
+                                                        class="icon feather icon-facebook"></i></a>
+                                                <a href="#" class="h6 text-muted d-block m-1"><i
+                                                        class="icon feather icon-twitter"></i></a>
+                                                <a href="#" class="h6 text-muted d-block m-1"><i
+                                                        class="icon feather icon-instagram"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

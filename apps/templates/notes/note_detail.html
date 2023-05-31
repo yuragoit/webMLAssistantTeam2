@@ -1,0 +1,98 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block title %} {{title}} {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<link href="{% static 'assets/css/notes_add.css' %}" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Notes Page</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="{% url 'notes:notes_list'%}">Notes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Note info</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <div class="form-group">
+                                            <label for="{{ note.name.id_for_label }}" class="col-sm-2 control-label">Short description</label>
+                                            <div>
+                                                {{ note.name }}
+                                            </div>
+                                        </div>
+                                    </p>
+                                    <p>
+                                        <div class="form-group">
+                                            <label for="{{ note.description.id_for_label }}" class="col-sm-2 control-label">Description</label>
+                                            <div>
+                                                {{ note.description }}
+                                            </div>
+                                        </div>
+                                    </p>
+                                    <p>
+                                        <div class="form-group">
+                                            <label for="{{ note.teg_list.id_for_label }}" class="col-sm-2 control-label">Tags</label>
+                                            <div>
+                                                {{ note.teg_list }}
+                                            </div>
+                                        </div>
+                                    </p>
+                                    <p>
+                                        <div class="form-group">
+                                            <label for="{{ note.done.id_for_label }}" class="col-sm-2 control-label">Done</label>
+                                            <div>
+                                                {{ note.done }}
+                                            </div>
+                                        </div>
+                                    </p>
+                                    <p>
+                                        <div class="form-group">
+                                            <label for="{{ note.created.id_for_label }}" class="col-sm-2 control-label">Created</label>
+                                            <div>
+                                                {{ note.created }}
+                                            </div>
+                                        </div>
+                                    </p>
+                                </div>                                                                                                                          
+                            </div>                                                                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

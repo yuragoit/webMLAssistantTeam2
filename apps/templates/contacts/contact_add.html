@@ -1,0 +1,114 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block title %} {{title}} {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<link href="{% static 'assets/css/contact_add.css' %}" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">Address Book Page</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">Address Book</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <form class="form-horizontal" action="{% url 'contacts:contact_create' %}" method="post">
+                              {% csrf_token %}
+                              <div class="panel panel-default">
+                                  <div class="panel-body text-center">
+                                      <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-circle profile-avatar"
+                                          alt="User avatar">
+                                  </div>
+                              </div>
+                              <div class="panel panel-default">
+                                  <div class="panel-heading">
+                                      <h4 class="panel-title">Contact info</h4>
+                                  </div>
+                                  {% if form.phone_number.errors %}
+                                        <div class="alert alert-danger">
+                                            {{ form.phone_number.errors }}
+                                        </div>
+                                    {% endif %}
+                                  <div class="panel-body">
+                                      <div class="form-group">
+                                          <label for="{{ form.first_name.id_for_label }}" class="col-sm-2 control-label">Full Name</label>
+                                          <div class="col-sm-10">
+                                              {{ form.first_name }}
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="{{ form.phone_number.id_for_label }}" class="col-sm-2 control-label">Phone number</label>
+                                          <div class="col-sm-10">
+                                              {{ form.phone_number }}
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="{{ form.email.id_for_label }}" class="col-sm-2 control-label">E-mail</label>
+                                          <div class="col-sm-10">
+                                              {{ form.email }}
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="{{ form.birthday.id_for_label }}" class="col-sm-2 control-label">Birthday</label>
+                                          <div class="col-sm-10">
+                                              {{ form.birthday }}
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="{{ form.address.id_for_label }}" class="col-sm-2 control-label">Address</label>
+                                          <div class="col-sm-10">
+                                              {{ form.address }}
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <div class="col-sm-10 col-sm-offset-2">
+                                              <button type="submit" class="btn btn-primary">Submit</button>
+                                              <button type="reset" class="btn btn-default">Clear</button>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </form>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

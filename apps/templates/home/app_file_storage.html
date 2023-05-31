@@ -1,0 +1,125 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} File Storage Page {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">File Storage Page</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">File Storage</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper" style="display: flex">
+                            <!-- [ Main Content ] start -->
+                            <div style="display: flex">
+                                <div>
+                                    <form method="get">
+                                        <div class="list-group">
+                                            <a href="{% url "storage:archives" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0)"><span
+                                                    class="pcoded-micon"><i class="feather icon-folder"></i></span>
+                                                Archives</a>
+                                            <a href="{% url "storage:audio" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0)"><span
+                                                    class="pcoded-micon"><i class="feather icon-music"></i></span>
+                                                Audio</a>
+                                            <a href="{% url "storage:documents" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0)"><span
+                                                    class="pcoded-micon"><i class="feather icon-file-text"></i></span>
+                                                Documents</a>
+                                            <a href="{% url "storage:images" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0)"><span
+                                                    class="pcoded-micon"><i class="feather icon-image"></i></span>
+                                                Images</a>
+                                            <a href="{% url "storage:programs" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0)"><span
+                                                    class="pcoded-micon"><i class="feather icon-cpu"></i></span>
+                                                Programs</a>
+                                            <a href="{% url "storage:video" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0)"><span
+                                                    class="pcoded-micon"><i class="feather icon-video"></i></span>
+                                                Video</a>
+                                            <a href="{% url "storage:others" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0)"><span
+                                                    class="pcoded-micon"><i class="feather icon-package"></i></span>
+                                                Others</a>
+                                            <a href="{% url "storage:downloads" %}"
+                                               class="list-group-item list-group-item"
+                                               style="background: rgba(0, 0, 0, 0); margin-top: 100%"><span
+                                                    class="pcoded-micon"><i class="feather icon-download"></i></span>
+                                                Downloads</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div style="margin: 50px 270px">
+                                    <form action="{% url "storage:upload" %}" method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                        <div class="input-group mb-3">
+                                              <div class="custom-file">
+                                                  <input type="file" class="custom-file-input" id="inputGroupFile02" name="upload_file" value="Choose File">
+                                                  <label class="custom-file-label" for="inputGroupFile02">Choose File</label>
+                                              </div>
+                                            <div class="input-group-append">
+                                              <button class="input-group-text" style="background: #1dd5d2; color: white; border-bottom-color: #1dd5d2;" type="reset">Reset
+                                              <span
+                                                class="pcoded-micon" style="padding-left: 5px"><i class="feather icon-repeat"></i></span></button>
+                                            </div>
+                                              <div class="input-group-append">
+                                                  <button class="input-group-text" style="background: #1dd5d2; color: white; border-bottom-color: #1dd5d2">Upload
+                                                  <span
+                                                    class="pcoded-micon" style="padding-left: 5px"><i class="feather icon-upload"></i></span></button>
+                                              </div>
+                                        </div>
+                                    </form>
+                                    <div>
+                                        <span class="mb-0 text-muted">
+                                            {% if flag %}
+                                                <span class="text-success">{{ msg | safe }}</span>
+                                            {% else %}
+                                                <span class="text-danger">{{ msg | safe }}</span>
+                                            {% endif %}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->1
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

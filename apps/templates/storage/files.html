@@ -1,0 +1,118 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block title %} {{ title }} {% endblock %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+    <link href="{% static 'assets/css/files.css' %}" rel="stylesheet">
+<!-- Datatables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/dataTables.bootstrap5.min.css">
+{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+                    <div class="page-header">
+                        <div class="page-block">
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <div class="page-header-title">
+                                        <h5 class="m-b-10">File Storage Page</h5>
+                                    </div>
+                                    <ul class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="{% url "storage:upload" %}" >File Storage</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">{{ title }}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ breadcrumb ] end -->
+                    <div class="main-body">
+                        <div class="page-wrapper" style="display: flex">
+                            <!-- [ Main Content ] start -->
+                             <table class="table project-list-table table-nowrap align-middle table-borderless" id="example" style="width: 100%;">
+                                 <thead>
+                                        <tr>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Size</th>
+                                            <th scope="col">Upload at</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                 </thead>
+                                 <tbody>
+                                        {% for file in files %}
+                                            <tr>
+                                                <td>
+                                                    {% if file.type == 'Archives' %}
+                                                   <i class="feather icon-folder"></i>
+                                                    {% endif %}
+                                                    {% if file.type == 'Audio' %}
+                                                   <i class="feather icon-music"></i>
+                                                    {% endif %}
+                                                    {% if file.type == 'Documents' %}
+                                                   <i class="feather icon-file-text"></i>
+                                                    {% endif %}
+                                                    {% if file.type == 'Images' %}
+                                                   <i class="feather icon-image"></i>
+                                                    {% endif %}
+                                                    {% if file.type == 'Programs' %}
+                                                   <i class="feather icon-command"></i>
+                                                    {% endif %}
+                                                    {% if file.type == 'Vidoe' %}
+                                                   <i class="feather icon-video"></i>
+                                                    {% endif %}
+                                                    {% if file.type == 'Others' %}
+                                                   <i class="feather icon-package"></i>
+                                                    {% endif %}
+                                                    {{file.name}}
+                                                </td>
+                                                <td>{{file.size|filesizeformat}}</td>
+                                                <td>{{file.upload_at.date}}</td>
+                                                <td>
+                                                    <form action="{% url 'storage:delete' file.name%}" method="post">
+                                                    {% csrf_token %}
+                                                        <button type="submit" class="btn" style="background-color: #1dd5d2;">
+                                                            <i class="feather icon-trash"></i>
+                                                            Delete
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                                <td>
+                                                    <form action="{% url 'storage:download' file.name%}" method="get">
+                                                    {% csrf_token %}
+                                                        <button type="submit" class="btn" style="background-color: #1dd5d2;">
+                                                            <i class="feather icon-download"></i>
+                                                            Download
+                                                        </button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                             </table>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<!-- Datatables JS -->
+<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Datatables script -->
+{% endblock javascripts %}

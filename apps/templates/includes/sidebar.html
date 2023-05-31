@@ -1,0 +1,94 @@
+<!-- [ navigation menu ] start -->
+<nav class="pcoded-navbar">
+    <div class="navbar-wrapper">
+        <div class="navbar-brand header-logo">
+            <a href="/" class="b-brand">
+                <div class="b-bg">
+                    <i class="feather icon-trending-up"></i>
+                </div>
+                <span class="b-title">Web Assistant (T4)</span>
+            </a>
+            <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+        </div>
+        <div class="navbar-content scroll-div">
+            <ul class="nav pcoded-inner-navbar">
+                <li class="nav-item pcoded-menu-caption">
+                    <label>CRUD TOOLS</label>
+                </li>
+                <li data-username="Home Page"
+                    class="nav-item {% if 'index' in segment %} active {% endif %}">
+                    <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span
+                            class="pcoded-mtext">Home Page</span></a>
+                </li>
+
+                <li data-username="Address Book" class="nav-item"><a href="{% url 'contacts:contact_list' %}" class="nav-link"><span
+                        class="pcoded-micon"><i class="feather icon-copy"></i></span><span class="pcoded-mtext">Address Book App</span></a>
+                </li>
+
+                <li data-username="Notes Page" class="nav-item"><a href="/notes/" class="nav-link"><span
+                        class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">Notes App</span></a>
+                </li>
+
+                <li data-username="News Page" class="nav-item"><a href="/news/" class="nav-link"><span
+                        class="pcoded-micon"><i class="feather icon-camera"></i></span><span class="pcoded-mtext">News App</span></a>
+                </li>
+
+                <li data-username="File Storage Page" class="nav-item"><a href="/storage/" class="nav-link"><span
+                        class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">File Storage App</span></a>
+                </li>
+
+                <li class="nav-item pcoded-menu-caption">
+                    <label>ML Tools</label>
+                </li>
+
+                <li data-username="Computer Vision"
+                    class="nav-item pcoded-hasmenu">
+                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span
+                            class="pcoded-mtext">Computer Vision</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class=""><a href="/app_ml_image_classification.html" class="" >Image Classification</a></li>
+                        <li class=""><a href="/app_ml_object_detection.html" class="" >Object Detection</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item pcoded-menu-caption">
+                    <label>Useful Pages</label>
+                </li>
+                <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
+                    class="nav-item pcoded-hasmenu">
+                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span
+                            class="pcoded-mtext">Authentication</span></a>
+                    <ul class="pcoded-submenu">
+                        <li class=""><a href="/register.html" class="" target="_blank">Sign UP</a></li>
+                        <li class=""><a href="/login.html" class="" target="_blank">Sign IN</a></li>
+                    </ul>
+                </li>
+
+                <li data-username="Profile Page"
+                    class="nav-item {% if 'profile' in segment %} active {% endif %}">
+                    <a href="/profile.html" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-user"></i></span>
+                            <span class="pcoded-mtext">Profile Page</span></a>
+                </li>
+
+                <li data-username="Disabled Menu" class="nav-item">
+                    <a href="{% url 'logout' %}" class="nav-link">
+                        <span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span>
+                    </a>
+                </li>
+                <li class="nav-item pcoded-menu-caption">
+                    <label>More Resources</label>
+                </li>                    
+                <li data-username="Support Page" class="nav-item ">
+                    <a target="_blank" href="https://github.com/yuragoit/webAssistantTeam4/" class="nav-link">
+                        <span class="pcoded-micon">
+                            <i class="feather icon-headphones"></i>
+                        </span>
+                        <span class="pcoded-mtext">Support</span>
+                    </a>
+                </li>                
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- [ navigation menu ] end -->

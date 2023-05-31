@@ -1,0 +1,19 @@
+.avatar-sm {
+    height: 2rem;
+    width: 2rem;
+}
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+/*
+div.dataTables_length {
+    text-align: left!important;
+}*/
+
+
+.add-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
