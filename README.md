@@ -1,7 +1,7 @@
 # [Web-ML Assistant (T4)]
 
-You can go to :
-<a href='https://5085-purple-water-00859558.eu-ws3.runcode.io/' target="_blank">LIVE Web-ML Assistant (T4) App</a>
+You can go to (server stopped):
+<a href='https://webassistantteam4-production.up.railway.app/' target="_blank">LIVE Web-ML Assistant (T4) App</a>
 
 # Stack of technologies used
 <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="30" height="30"/> </a>
