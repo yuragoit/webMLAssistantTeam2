@@ -1,7 +1,7 @@
 # [Web-ML Assistant (T4)]
 
-You can go to (server stopped):
-<a href='https://webassistantteam4-production.up.railway.app/' target="_blank">LIVE Web-ML Assistant (T4) App</a>
+You can go to:
+<a href='https://webassistantteam2-production.up.railway.app/' target="_blank">LIVE Web-ML Assistant (T4) App</a>
 
 # Stack of technologies used
 <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="30" height="30"/> </a>
@@ -196,7 +196,10 @@ The project is coded using a simple and intuitive structure presented below:
 
 ## Screenshots
 
-![ML_TOOLS](https://github.com/yuragoit/webAssistantTeam4/assets/101989870/1facd134-b3fd-4923-b7ed-b36213add11b)
+![ML_Classifier](https://github.com/yuragoit/webAssistantTeam4/assets/101989870/1facd134-b3fd-4923-b7ed-b36213add11b)
+
+![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/cd6f7a8d-8486-44e1-b7c2-8210852eda0a)
+
 
 ## License
 
