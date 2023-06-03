@@ -6,6 +6,7 @@ You can go to:
 # Stack of technologies used
 <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="30" height="30"/> </a>
 <a href="https://keras.io/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Keras_logo.svg/512px-Keras_logo.svg.png?20200317115153" alt="Keras" width="30" height="30"/> </a>
+<a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" width="30" height="30"/> </a>
 <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="30" height="30"/> </a> 
 <a href="https://www.djangoproject.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg" alt="django" width="30" height="30"/> </a> 
 <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="30" height="30"/> </a> 
@@ -196,8 +197,8 @@ The project is coded using a simple and intuitive structure presented below:
 
 ## Screenshots
 
-![ML_Classifier](https://github.com/yuragoit/webAssistantTeam4/assets/101989870/1facd134-b3fd-4923-b7ed-b36213add11b)
-
+![ML_Classifier_PC](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/199eebcf-ec42-4a0d-8b09-3e4a99fa9e88)
+![ML_Classifier_mob](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/945501e9-52f9-4ed6-bae3-c92f44cc89ec)
 ![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/cd6f7a8d-8486-44e1-b7c2-8210852eda0a)
 
 
