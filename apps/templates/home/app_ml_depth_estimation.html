@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Object Detection Page {% endblock %}
+{% block title %} Depth Estimation Page {% endblock %}
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -18,11 +18,11 @@
                             <div class="row align-items-center">
                                 <div class="col-md-12">
                                     <div class="page-header-title">
-                                        <h5 class="m-b-10">Object Detection Page</h5>
+                                        <h5 class="m-b-10">Depth Estimation Page</h5>
                                     </div>
                                     <ul class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-                                        <li class="breadcrumb-item"><a href="javascript:">Object Detection</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:">Depth Estimation</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                 type="module"
                                 src="https://gradio.s3-us-west-2.amazonaws.com/3.34.0/gradio.js"
                             ></script>
-                            <gradio-app src="https://yuragoithf-mlg-obj-detection.hf.space"></gradio-app>
+                            <gradio-app src="https://yuragoithf-mlg-depth-estimation.hf.space"></gradio-app>
                             <!-- [ Main Content ] end -->
                         </div>
                     </div>

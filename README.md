@@ -22,9 +22,23 @@ You can go to:
 
 # About the project
 
-- Main idea of the project: creating a personal web-ML assistant with useful modules
-- Deadline: MVP - X days, Prod - Y days, presentation - 1 day
-- Supported modules: computer vision (Image Classification, Object Detection), authentication (AUTH functionality), contacts (CRUD, filter functionality for address book, validation), noteapp (CRUD, filter functionality for notes), news (news scraping module via spyder), storage (upload and download files to / from server, sorting by categories)
+- Main idea of the project: creating a personal web-ML assistant with useful modules (Computer Vision, CRUD)
+- Deadline: MVP - 10 days, Prod - 2 days, presentation - 1 day
+- Supported modules: Computer Vision (Image Classification, Object Detection, Depth Estimation), authentication (AUTH functionality), contacts (CRUD, filter functionality for address book, validation), noteapp (CRUD, filter functionality for notes), news (news scraping module via spyder), storage (upload and download files to / from server, sorting by categories)
+- Dataset based on CIFAR10 (https://www.kaggle.com/c/cifar-10/)
+- Technical Requirements for Computer Vision module: implement a Web-service and create CNN capable of classifying an image given to it in one of the 10 classes.
+- Techniques were used: transfer learning, fine tuning using EfficientNet neural network, data augmentation, ReduceLROnPlateau, EarlyStopping, model compression (Quantization, Pruning)
+
+# About the Image Classification App features
+
+- Used Django web framework with the MVT architecture.
+- Realised data filtering (io, os) and pre-processing (PIL) for uploaded images.
+- App deals with different types exceptions.
+- The App has a status bar for uploading or recognition process with evaluation of estimated time.
+- Filtering non-CIFAR10 classes.
+- Informative output with visualized probability style.
+- Work with zero-background, 4K images.
+- Included examples on main page for testing purposes.
 
 ## About the Team
 
@@ -198,9 +212,8 @@ The project is coded using a simple and intuitive structure presented below:
 ## Screenshots
 
 ![ML_Classifier_PC](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/199eebcf-ec42-4a0d-8b09-3e4a99fa9e88)
-![ML_Classifier_mob](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/945501e9-52f9-4ed6-bae3-c92f44cc89ec)
 ![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/cd6f7a8d-8486-44e1-b7c2-8210852eda0a)
-
+![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/230e5234-46b9-4d95-bbe2-f15b66b89761)
 
 ## License
 
