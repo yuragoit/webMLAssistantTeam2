@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "webAssistantTeam4"
+name = "webAssistantTeam2"
 version = "0.1.1"
 description = ""
-authors = ["TEAM 4"]
+authors = ["TEAM 2"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
