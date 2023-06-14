@@ -212,9 +212,9 @@ The project is coded using a simple and intuitive structure presented below:
 
 ## Screenshots
 
-![ML_Classifier_PC](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/199eebcf-ec42-4a0d-8b09-3e4a99fa9e88)
-![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/cd6f7a8d-8486-44e1-b7c2-8210852eda0a)
-![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/230e5234-46b9-4d95-bbe2-f15b66b89761)
+![ML_Classifier_PC](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/8dbb4663-881b-47c8-b706-d0c9464e6d5c)
+![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/d1b42735-58fa-4432-9af8-8adcbe1815c3)
+![ML_Depth](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/1a927e54-cc1c-4b08-b930-064307fd7522)
 
 ## License
 
