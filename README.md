@@ -24,8 +24,8 @@ You can go to:
 
 - Main idea of the project: creating a personal Web-ML Assistant with useful modules (Computer Vision, NLP, CRUD)
 - Deadline: MVP - 10 days, Prod - 2 days, presentation - 1 day
-- Supported modules: Computer Vision (Image Classification, Object Detection, Depth Estimation), NLP (Image Funny Annotations, Personal Info Remover), authentication (AUTH functionality), contacts (CRUD, filter functionality for address book, validation), noteapp (CRUD, filter functionality for notes), news (news scraping module via spyder), storage (upload and download files to / from server, sorting by categories)
-- Dataset based on CIFAR10 (https://www.kaggle.com/c/cifar-10/)
+- Supported modules: Computer Vision (Image Classification, Object Detection, Depth Estimation, Semantic Segmentation), NLP (Image Funny Annotations, Personal Info Remover), authentication (AUTH functionality), contacts (CRUD, filter functionality for address book, validation), noteapp (CRUD, filter functionality for notes), news (news scraping module via spyder), storage (upload and download files to / from server, sorting by categories)
+- Dataset based on [CIFAR10](https://www.kaggle.com/c/cifar-10/)
 - Technical Requirements for Computer Vision module: implement a Web-service and create CNN capable of classifying an image given to it in one of the 10 classes.
 - Techniques were used: transfer learning, fine tuning using EfficientNetV2 neural network, data augmentation, ReduceLROnPlateau, EarlyStopping, model compression (Quantization, Pruning)
 
@@ -215,7 +215,7 @@ The project is coded using a simple and intuitive structure presented below:
 ![ML_Classifier_PC](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/8dbb4663-881b-47c8-b706-d0c9464e6d5c)
 ![ML_Detection](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/d1b42735-58fa-4432-9af8-8adcbe1815c3)
 ![ML_Depth](https://github.com/yuragoit/webMLAssistantTeam2/assets/101989870/1a927e54-cc1c-4b08-b930-064307fd7522)
-
+![ML_Semantic](https://github.com/yuragoit/AirbusShipDetection/assets/101989870/0dce0a55-72ef-4d6d-adb7-42b7da2894fa)
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
