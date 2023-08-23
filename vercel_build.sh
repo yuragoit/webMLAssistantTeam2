@@ -1,5 +1,5 @@
 echo "BUILD START"
-sudo apt-get install libsqlite3-dev
+apt-get install libsqlite3-dev
 python3.9 -m pip install --upgrade pip
 python3.9 -m pip install --no-cache-dir -r requirements.txt
 python3.9 -m pip install pysqlite
