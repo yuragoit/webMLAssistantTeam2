@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5085",
     "http://127.0.0.1",
+    "https://*.koyeb.app",
     "https://" + env("SERVER", default="127.0.0.1"),
     "https://" + env("SERVER_REPLICA", default="127.0.0.1"),
 ]
