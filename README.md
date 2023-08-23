@@ -1,7 +1,7 @@
 # [Web-ML Assistant (T4)]
 
 You can go to:
-<a href='https://webmlassistantteam2-production.up.railway.app/' target="_blank">LIVE Web-ML Assistant App</a>
+<a href='https://webml-assistant-team2-jci.koyeb.app/' target="_blank">LIVE Web-ML Assistant App</a>
 
 # Stack of technologies used
 <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="30" height="30"/> </a>
