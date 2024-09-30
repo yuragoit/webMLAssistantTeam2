@@ -16,3 +16,4 @@ django-phonenumber-field==7.0.2
 django-phonenumbers==1.0.1
 itemadapter==0.7.0
 Scrapy==2.11.2
+Twisted==22.10.0
